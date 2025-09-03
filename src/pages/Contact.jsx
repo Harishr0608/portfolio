@@ -1,13 +1,14 @@
 // src/pages/Contact.jsx
-export default function Contact() {
+export default function Contact(){
   return (
-    <section>
+    <section className="section">
       <h2>Contact</h2>
-      <ul>
-        <li><a href="mailto:harishr0608@gmail.com">harishr0608@gmail.com</a></li>
-        <li><a href="https://www.linkedin.com/in/harishr0608/">LinkedIn</a></li>
-        <li><a href="https://github.com/Harishr0608">GitHub</a></li>
-      </ul>
+      <div className="card">
+        <p>Email: <a href="mailto:harishr0608@gmail.com">harishr0608@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/harishr0608/" target="_blank" rel="noreferrer">linkedin.com/in/harishr0608</a></p>
+        <p>GitHub: <a href="https://github.com/Harishr0608" target="_blank" rel="noreferrer">github.com/Harishr0608</a></p>
+        <p className="meta">Chennai, India • +91 63799 18090</p>
+      </div>
     </section>
   )
 }

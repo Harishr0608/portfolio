@@ -1,31 +1,53 @@
 // src/pages/Projects.jsx
-const Card = ({ title, desc, tech }) => (
-  <div style={{ border: '1px solid #e5e7eb', borderRadius: 12, padding: 16 }}>
-    <h3 style={{ margin: '0 0 8px' }}>{title}</h3>
-    <p style={{ margin: '0 0 6px', color: '#4b5563' }}>{desc}</p>
-    <p style={{ margin: 0, fontSize: 14, color: '#6b7280' }}>Tech: {tech}</p>
-  </div>
-)
-
-export default function Projects() {
+function Project({ title, when, problem, approach, tech, links }){
   return (
-    <section style={{ display: 'grid', gap: 16 }}>
+    <article className="card">
+      <h3>{title}</h3>
+      <p className="meta">{when}</p>
+      <p><strong>Problem:</strong> {problem}</p>
+      <p><strong>Approach:</strong> {approach}</p>
+      <p className="meta"><strong>Tech:</strong> {tech}</p>
+      {links && (
+        <p className="meta">
+          {links.map(({label, href}) => (
+            <a key={label} href={href} target="_blank" rel="noreferrer" style={{marginRight: 12}}>{label}</a>
+          ))}
+        </p>
+      )}
+    </article>
+  )
+}
+
+export default function Projects(){
+  return (
+    <section className="section">
       <h2>Projects</h2>
-      <Card
-        title="Real‑Time Multi‑Source RAG Chatbot"
-        desc="Schema‑aware retrieval with embeddings and observability for reliable answers."
-        tech="Python, LangChain/DSPy, DynamoDB, AWS Bedrock/Comprehend"
-      />
-      <Card
-        title="Loan Approval Prediction"
-        desc="Classification workflow and feature engineering for approval likelihood."
-        tech="Python, scikit‑learn"
-      />
-      <Card
-        title="Real‑Time Face Mask Detection"
-        desc="Camera inference pipeline to detect mask usage."
-        tech="Python, TensorFlow/Keras, OpenCV"
-      />
+      <div className="grid">
+        <Project
+          title="Real‑Time Multi‑Source RAG Chatbot"
+          when="07/2025"
+          problem="Ingest and query PDFs, DOCX, Excel, HTML, YouTube, and URLs in real time with source‑attributed answers."
+          approach="Modular LangGraph agents for ingest/retrieval; OpenAI embeddings in ChromaDB; FastAPI backend; Streamlit UI; Dockerized."
+          tech="LangGraph, OpenAI, ChromaDB, FastAPI, Streamlit, Docker"
+          links={[{label:'GitHub', href:'https://github.com/Harishr0608/Real-Time-Multi-Source-RAG-Chatbot.git'}]}
+        />
+        <Project
+          title="Loan Approval Prediction"
+          when="10/2024"
+          problem="Predict approval outcomes to identify high‑risk applicants and reduce defaults."
+          approach="Engineered features and evaluated multiple models; achieved ~95.05% accuracy with XGBoost while keeping interpretability."
+          tech="scikit‑learn, XGBoost, Pandas, NumPy, Matplotlib, Seaborn"
+          links={[{label:'GitHub', href:'https://github.com/Harishr0608/Loan-Approval-Prediction'}]}
+        />
+        <Project
+          title="Real‑Time Face Mask Detection"
+          when="11/2023"
+          problem="Classify masked vs unmasked faces in camera streams for public‑health monitoring."
+          approach="Lightweight CNN with MobileNetV2 and OpenCV pipeline for robust real‑time inference."
+          tech="TensorFlow/Keras, OpenCV, CNN (MobileNetV2)"
+          links={[{label:'GitHub', href:'https://github.com/Harishr0608/Real-time-Face-Mask-Detection'}]}
+        />
+      </div>
     </section>
   )
 }

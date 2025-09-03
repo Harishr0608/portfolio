@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import { Link, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home.jsx'
+import Projects from './pages/Projects.jsx'
+import About from './pages/About.jsx'
+import Contact from './pages/Contact.jsx'
+import Experience from './pages/Experience.jsx' // NEW
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: 1.5 }}>
+      <header style={{ display: 'flex', gap: 16, padding: '12px 16px', borderBottom: '1px solid #e5e7eb' }}>
+        <Link to="/">Home</Link>
+        <Link to="/projects">Projects</Link>
+        <Link to="/about">About</Link>
+        <Link to="/experience">Experience</Link> {/* NEW */}
+        <Link to="/contact">Contact</Link>
+      </header>
+
+      <main style={{ maxWidth: 980, margin: '32px auto', padding: '0 16px' }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/experience" element={<Experience />} /> {/* NEW */}
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </main>
+    </div>
   )
 }
-
-export default App

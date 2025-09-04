@@ -17,7 +17,6 @@
 /* Base + responsive typography */
 *{ box-sizing: border-box; }
 html, body, #root{ height: 100%; }
-
 body{
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji";
@@ -58,7 +57,6 @@ a:hover{ text-decoration: underline; }
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
-
 .navbar-inner{
   display: flex;
   align-items: center;
@@ -67,7 +65,6 @@ a:hover{ text-decoration: underline; }
   padding: 12px 0;
   flex-wrap: wrap; /* allow wrapping on narrow screens */
 }
-
 .brand{
   display: flex; align-items: center; gap: 10px;
   font-weight: 700; color: var(--text);
@@ -77,7 +74,6 @@ a:hover{ text-decoration: underline; }
   background: linear-gradient(135deg, var(--primary), #38bdf8);
   display: grid; place-items: center; color: #001018; font-weight: 800;
 }
-
 .nav{
   display: flex; gap: 12px; flex-wrap: wrap;
 }
@@ -92,7 +88,6 @@ a:hover{ text-decoration: underline; }
   border-color: var(--border);
   color: var(--link);
 }
-
 /* Tighten nav on very small phones */
 @media (max-width: 480px){
   .nav{ gap: 8px; }
@@ -162,3 +157,76 @@ img{ max-width: 100%; height: auto; display: block; border-radius: 10px; }
   color: var(--muted);
   text-align: center;
 }
+
+/* ========== Modern About page ========== */
+
+/* About hero panel */
+.about-hero{
+  display: grid;
+  gap: 12px;
+  background: linear-gradient(180deg, rgba(14,22,39,0.8), rgba(9,16,33,0.8));
+}
+.about-hero-left h2{ margin: 0 0 8px; }
+.about-badges{ display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+
+/* Badges and chips */
+.badge{
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #0b2336;
+  border: 1px solid var(--border);
+  color: var(--link);
+  font-size: 13px;
+}
+.chip{
+  display: inline-flex; align-items: center;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: #0a1b2d;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-size: 13px;
+}
+.chip-wrap{ display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* Split layout: Skills | Education */
+.split-2{
+  display: grid; gap: 16px; margin-top: 18px;
+}
+@media (min-width: 900px){
+  .split-2{ grid-template-columns: 1.2fr 1fr; } /* wider area for skills */
+}
+
+/* Timeline */
+.timeline{
+  list-style: none; margin: 0; padding: 0 0 0 10px;
+  position: relative;
+}
+.timeline::before{
+  content: '';
+  position: absolute; left: 8px; top: 0; bottom: 0;
+  width: 2px; background: linear-gradient(180deg, var(--border), transparent);
+}
+.tl-item{
+  position: relative; padding-left: 24px; margin-bottom: 18px;
+}
+.tl-item.tl-last{ margin-bottom: 0; }
+.tl-marker{
+  position: absolute; left: 2px; top: 6px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--primary); box-shadow: 0 0 0 3px rgba(14,165,233,0.2);
+}
+.tl-card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+}
+.tl-head{
+  display: flex; align-items: baseline; justify-content: space-between; gap: 8px; flex-wrap: wrap;
+}
+.tl-school{ margin: 0; }
+.tl-dates{ color: var(--muted); font-size: 13px; }
+.tl-program{ margin: 6px 0 0; }
+.tl-list{ margin: 8px 0 0 18px; }

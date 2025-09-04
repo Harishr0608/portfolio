@@ -162,3 +162,92 @@ img{ max-width: 100%; height: auto; display: block; border-radius: 10px; }
   color: var(--muted);
   text-align: center;
 }
+
+
+/* Section accents */
+.section-title{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, var(--primary), transparent 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.section-subtitle{ margin: 12px 0; }
+
+/* Two-column About layout (stacks on mobile) */
+.about-layout{
+  display: grid;
+  gap: 18px;
+}
+@media (min-width: 900px){
+  .about-layout{
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+  }
+}
+
+/* Skills */
+.skills-groups{
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+}
+.skills-card{ padding: 16px; }
+.skills-header{
+  display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
+}
+.skills-dot{
+  width: 10px; height: 10px; border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--primary), #38bdf8);
+}
+
+/* Chips */
+.chips{ display: flex; flex-wrap: wrap; gap: 8px; }
+.chip{
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, #0c182a, #0a1626);
+  color: var(--text);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.02) inset;
+}
+
+/* Education timeline */
+.timeline{
+  position: relative;
+  padding-left: 18px;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+.timeline::before{
+  content: "";
+  position: absolute;
+  left: 8px; top: 2px; bottom: 2px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(125, 211, 252, 0.35), rgba(56, 189, 248, 0.15));
+}
+.timeline-item{
+  position: relative;
+  padding-left: 10px;
+}
+.timeline-marker{
+  position: absolute; left: -2px; top: 16px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 3px rgba(14,165,233,0.2);
+}
+.timeline-body{ display: grid; gap: 4px; }
+.timeline-top{
+  display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
+}
+.timeline-title{ margin: 0; font-size: clamp(16px, 2.6vw, 18px); }
+.timeline-meta, .timeline-period, .timeline-credential{ color: var(--muted); }
+
+/* Motion-safety */
+@media (prefers-reduced-motion: reduce){
+  * { animation: none !important; transition: none !important; }
+}

@@ -7,104 +7,129 @@ const skills = {
     'Natural Language Processing',
     'Deep Learning (Basics)'
   ],
-  'Generative AI & LLMs': ['RAG', 'Prompt Engineering', 'LangChain', 'DSPy', 'AWS Bedrock', 'Amazon Comprehend'],
+  'Generative AI & LLMs': ['Retrieval-Augmented Generation (RAG)', 'Prompt Engineering', 'LangChain', 'DSPy', 'AWS Bedrock', 'Amazon Comprehend', 'LangGraph'],
   'Data Modeling': ['ER Diagrams', 'Dimensional Modeling', 'Normalization', 'Schema Design', 'DynamoDB (NoSQL)'],
   'Data Analysis': ['Exploratory Data Analysis', 'Feature Engineering', 'Feature Selection'],
-  'Statistical Methods': ['Hypothesis Testing', 'Chi‑Square', 'ANOVA', 'Z‑Test', 'T‑Test', 'Covariance', 'Correlation'],
+  'Statistical Methods': ['Hypothesis Testing', 'Chi-Square', 'ANOVA', 'Z-Test', 'T-Test', 'Covariance', 'Correlation'],
   'Data Manipulation': ['Pandas', 'NumPy', 'MS Excel', 'Power Query', 'ETL (Extract, Transform, Load)'],
   'Data Visualization': ['Matplotlib', 'Seaborn', 'Tableau', 'Power BI', 'Looker Studio'],
   'Databases': ['MySQL', 'DynamoDB'],
-  'Version Control': ['Git', 'GitHub'],
-  'Tools & Frameworks': ['Scikit‑Learn', 'SciPy', 'Selenium', 'LangChain', 'DSPy', 'OpenCV', 'TensorFlow', 'Keras', 'FastAPI'],
+  'Version Control Systems': ['Git', 'GitHub'],
+  'Tools & Frameworks': ['Scikit-Learn', 'SciPy', 'Selenium', 'LangChain', 'DSPy', 'OpenCV', 'TensorFlow', 'Keras', 'FastAPI'],
   'Model Deployment': ['Heroku'],
   'Web Scraping & Automation': ['Beautiful Soup', 'Selenium', 'Image Classification'],
-  'Software Development': ['Agile Methodology']
-};
+  'Software Development': ['Agile Methodology'],
+}
 
 const education = [
   {
     school: 'Great Lakes Institute of Management',
     location: 'Chennai, IN',
-    credential: 'Post Graduate Program (Data Science and Engineering)',
-    period: '05/2024 – 12/2024',
-    details:
-      'Coursework: Business Case Study, MS Excel, MySQL, Python, EDA, Feature Engineering, Visualization (incl. Tableau), Machine Learning, Model Deployment, Feature Selection, Web Scraping, ETL'
+    program: 'Post Graduate Program (Data Science and Engineering)',
+    dates: '05/2024 – 12/2024',
+    details: [
+      'Relevant Coursework: Business Case Study, MS Excel, MySQL, Python, EDA, Feature Engineering, Data Visualization (incl. Tableau), Machine Learning, Model Deployment, Feature Selection, Web Scraping, ETL'
+    ]
   },
   {
     school: 'Vellore Institute of Technology',
     location: 'Vellore, IN',
-    credential: 'M.Tech (5‑Year Integrated Software Engineering); CGPA: 7.57',
-    period: '05/2023'
+    program: 'M.Tech (5‑Year Integrated Software Engineering); CGPA: 7.57',
+    dates: '05/2023',
+    details: []
   },
   {
     school: 'Orange International Matriculation School',
     location: 'Arani, IN',
-    credential: '12th (Tamil Nadu State Board); 72.0%',
-    period: '05/2018'
+    program: '12th (Tamil Nadu State Board); 72.0%',
+    dates: '05/2018',
+    details: []
   },
   {
     school: 'Orange International Matriculation School',
     location: 'Arani, IN',
-    credential: '10th (Tamil Nadu State Board); 88.6%',
-    period: ''
+    program: '10th (Tamil Nadu State Board); 88.6%',
+    dates: '04/2016',
+    details: []
   }
-];
+]
 
-export default function About() {
+function Chip({ label }) {
+  return <span className="chip">{label}</span>
+}
+
+function SkillGroup({ title, items }) {
+  return (
+    <div className="card">
+      <h3>{title}</h3>
+      <div className="chip-wrap">
+        {items.map((it) => <Chip key={it} label={it} />)}
+      </div>
+    </div>
+  )
+}
+
+function TimelineItem({ item, last }) {
+  return (
+    <li className={`tl-item ${last ? 'tl-last' : ''}`}>
+      <div className="tl-marker" />
+      <div className="tl-card">
+        <div className="tl-head">
+          <h3 className="tl-school">{item.school}</h3>
+          <span className="tl-dates">{item.dates}</span>
+        </div>
+        <p className="meta">{item.location}</p>
+        <p className="tl-program">{item.program}</p>
+        {item.details?.length > 0 && (
+          <ul className="tl-list">
+            {item.details.map((d, i) => <li key={i}>{d}</li>)}
+          </ul>
+        )}
+      </div>
+    </li>
+  )
+}
+
+export default function About(){
+  const aboutBlurb = `Machine Learning Engineer with a solid foundation in software engineering and practical experience in LLM applications, RAG, AWS Bedrock, and DynamoDB. Built real-time systems for prompt-response monitoring, case-sensitive NoSQL querying, and web automation with LLM pipelines. Focused on scalable ML/NLP solutions that combine generative AI with analytics to drive data-informed decisions.`
   return (
     <section className="section">
-      <h2 className="section-title">About</h2>
-
-      <p className="subtitle">
-        Machine Learning Engineer with a software engineering foundation, experienced in LLM applications,
-        Retrieval‑Augmented Generation on DynamoDB, AWS Bedrock, and observability pipelines, with a focus on
-        reliable retrieval, case‑sensitive NoSQL logic, and scalable web automation that turns data into
-        measurable business outcomes. {/* summary from resume */}
-      </p>
-
-      {/* Two-column responsive layout */}
-      <div className="about-layout">
-        {/* Skills */}
-        <div>
-          <h3 className="section-subtitle">Skills</h3>
-          <div className="skills-groups">
-            {Object.entries(skills).map(([group, list]) => (
-              <div className="card skills-card" key={group}>
-                <div className="skills-header">
-                  <span className="skills-dot" />
-                  <h4>{group}</h4>
-                </div>
-                <div className="chips">
-                  {list.map(item => (
-                    <span className="chip" key={item}>{item}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
+      {/* About hero */}
+      <div className="about-hero card">
+        <div className="about-hero-left">
+          <h2>About</h2>
+          <p className="subtitle">{aboutBlurb}</p>
+          <div className="about-badges">
+            <span className="badge">LLM Observability</span>
+            <span className="badge">Schema‑aware RAG</span>
+            <span className="badge">AWS Bedrock</span>
+            <span className="badge">DynamoDB</span>
           </div>
         </div>
+      </div>
 
-        {/* Education */}
-        <aside>
-          <h3 className="section-subtitle">Education</h3>
-          <ol className="timeline" aria-label="Education timeline">
-            {education.map((e) => (
-              <li className="timeline-item card" key={e.school + e.credential}>
-                <div className="timeline-marker" aria-hidden="true" />
-                <div className="timeline-body">
-                  <div className="timeline-top">
-                    <h4 className="timeline-title">{e.school}</h4>
-                    <span className="timeline-meta">{e.location}</span>
-                  </div>
-                  <p className="timeline-credential">{e.credential}</p>
-                  <p className="timeline-period">{e.period}</p>
-                  {e.details && <p className="meta">{e.details}</p>}
-                </div>
-              </li>
+      {/* Split layout: Skills | Education */}
+      <div className="split-2">
+        {/* Skills */}
+        <section>
+          <h2>Skills</h2>
+          <div className="grid">
+            {Object.entries(skills).map(([group, list]) => (
+              <SkillGroup key={group} title={group} items={list} />
+            ))}
+          </div>
+        </section>
+
+        {/* Education timeline */}
+        <section>
+          <h2>Education</h2>
+          <ol className="timeline">
+            {education.map((ed, idx) => (
+              <TimelineItem key={ed.school + idx} item={ed} last={idx === education.length - 1} />
             ))}
           </ol>
-        </aside>
+        </section>
       </div>
     </section>
-  );
+  )
 }

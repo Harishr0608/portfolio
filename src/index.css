@@ -181,3 +181,39 @@ main{ padding-bottom: 64px; }
 @media (prefers-reduced-motion: reduce){
   *{ animation: none !important; transition: none !important; }
 }
+
+/* Apply spacing to every section across pages */
+.section {
+  padding: 3rem 1.5rem; /* Top/Bottom, Left/Right */
+}
+
+/* Space between headings and the next content */
+.section h2,
+.section h3,
+.section p,
+.section ul,
+.section ol {
+  margin-bottom: 1.25rem;
+}
+
+/* Space between grid/flex items */
+.grid,
+.split-2 {
+  gap: 1.5rem;
+}
+
+/* Card spacing inside grid */
+.card {
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive scaling for smaller screens */
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 1rem;
+  }
+  .grid,
+  .split-2 {
+    gap: 1rem;
+  }
+}

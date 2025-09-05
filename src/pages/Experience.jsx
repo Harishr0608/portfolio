@@ -23,7 +23,7 @@ export default function Experience() {
                   Implemented metrics across multiple categories: 
                   <strong>Firewall</strong> (Toxicity, Jailbreak, Injection, Refusal, Privacy Check), 
                   <strong>Observability</strong> (Sentiment Analysis),
-                  <strong>Clarity</strong> (hallucination, faithfulness, bias, completeness, correctness, coherence, helpfulness, tone, refusal, groundedness),
+                  <strong>Clarity</strong> (hallucination, faithfulness, bias, completeness, correctness, coherence, helpfulness, refusal, groundedness),
                   <strong>Performance</strong> (BERTScore, BLEU, ROUGE, METEOR, BLEURT, Accuracy, Robustness, F1 Score), 
                   <strong>Relevance</strong> (context precision, recall, relevancy, entities recall).
                 </p>
@@ -63,7 +63,7 @@ export default function Experience() {
 
         <footer className="experience-footer">
           <p className="meta">
-            Stack: Python, LLM Observability, LangChain, DSPy, Bedrock, Comprehend, DynamoDB, FastAPI, Web Scraping, Selenium, Image Classification, Beautiful Soup, Docker, Kubernetes, Streamlit
+            Stack: Python, LLM Observability, LangChain, DSPy, Bedrock, Comprehend, DynamoDB, FastAPI, Web Scraping, Selenium, Image Classification, Beautiful Soup, Docker, Kubernetes, Streamlit, AWS, Azure
           </p>
         </footer>
       </article>

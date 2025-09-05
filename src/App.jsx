@@ -42,7 +42,7 @@ export default function App() {
         <div className="container navbar-inner">
           <div className="brand" aria-label="Harish R Home">
             <span className="brand-badge">HR</span>
-            <span className="brand-text">Harish R</span>
+            <span className="brand-text">Harish's Portfolio</span>
           </div>
           <MobileNav />
         </div>

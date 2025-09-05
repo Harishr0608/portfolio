@@ -1,19 +1,20 @@
-// src/pages/Projects.jsx
 function Project({ title, when, problem, approach, tech, links }){
   return (
-    <article className="card">
-      <h3>{title}</h3>
-      <p className="meta">{when}</p>
-      <p><strong>Problem:</strong> {problem}</p>
-      <p><strong>Approach:</strong> {approach}</p>
-      <p className="meta"><strong>Tech:</strong> {tech}</p>
-      {links && (
-        <p className="meta">
-          {links.map(({label, href}) => (
-            <a key={label} href={href} target="_blank" rel="noreferrer" style={{marginRight: 12}}>{label}</a>
-          ))}
-        </p>
-      )}
+    <article className="card tilt reveal">
+      <div className="tilt-inner">
+        <h3>{title}</h3>
+        <p className="meta">{when}</p>
+        <p><strong>Problem:</strong> {problem}</p>
+        <p><strong>Approach:</strong> {approach}</p>
+        <p className="meta"><strong>Tech:</strong> {tech}</p>
+        {links && (
+          <p className="meta">
+            {links.map(({label, href}) => (
+              <a key={label} href={href} target="_blank" rel="noreferrer" style={{marginRight: 12}}>{label}</a>
+            ))}
+          </p>
+        )}
+      </div>
     </article>
   )
 }

@@ -1,4 +1,3 @@
-// src/App.jsx
 import { NavLink, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import Projects from './pages/Projects.jsx'
@@ -10,7 +9,7 @@ import Footer from './components/Footer.jsx'
 export default function App() {
   return (
     <div className="app-shell">
-      <header className="navbar">
+      <header className="navbar reveal">
         <div className="container navbar-inner">
           <div className="brand">
             <span className="brand-badge">HR</span>

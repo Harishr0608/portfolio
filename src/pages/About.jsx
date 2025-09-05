@@ -1,4 +1,3 @@
-// src/pages/About.jsx
 const skills = {
   'Programming Languages': ['Python', 'SQL', 'OOP Concepts', 'Data Structures and Algorithms'],
   'Machine Learning': [
@@ -31,39 +30,21 @@ const education = [
       'Relevant Coursework: Business Case Study, MS Excel, MySQL, Python, EDA, Feature Engineering, Data Visualization (incl. Tableau), Machine Learning, Model Deployment, Feature Selection, Web Scraping, ETL'
     ]
   },
-  {
-    school: 'Vellore Institute of Technology',
-    location: 'Vellore, IN',
-    program: 'M.Tech (5‑Year Integrated Software Engineering); CGPA: 7.57',
-    dates: '05/2023',
-    details: []
-  },
-  {
-    school: 'Orange International Matriculation School',
-    location: 'Arani, IN',
-    program: '12th (Tamil Nadu State Board); 72.0%',
-    dates: '05/2018',
-    details: []
-  },
-  {
-    school: 'Orange International Matriculation School',
-    location: 'Arani, IN',
-    program: '10th (Tamil Nadu State Board); 88.6%',
-    dates: '04/2016',
-    details: []
-  }
+  { school: 'Vellore Institute of Technology', location: 'Vellore, IN', program: 'M.Tech (5‑Year Integrated Software Engineering); CGPA: 7.57', dates: '05/2023', details: [] },
+  { school: 'Orange International Matriculation School', location: 'Arani, IN', program: '12th (Tamil Nadu State Board); 72.0%', dates: '05/2018', details: [] },
+  { school: 'Orange International Matriculation School', location: 'Arani, IN', program: '10th (Tamil Nadu State Board); 88.6%', dates: '04/2016', details: [] }
 ]
 
-function Chip({ label }) {
-  return <span className="chip">{label}</span>
-}
+function Chip({ label }) { return <span className="chip">{label}</span> }
 
 function SkillGroup({ title, items }) {
   return (
-    <div className="card">
-      <h3>{title}</h3>
-      <div className="chip-wrap">
-        {items.map((it) => <Chip key={it} label={it} />)}
+    <div className="card tilt reveal">
+      <div className="tilt-inner">
+        <h3>{title}</h3>
+        <div className="chip-wrap">
+          {items.map((it) => <Chip key={it} label={it} />)}
+        </div>
       </div>
     </div>
   )
@@ -71,7 +52,7 @@ function SkillGroup({ title, items }) {
 
 function TimelineItem({ item, last }) {
   return (
-    <li className={`tl-item ${last ? 'tl-last' : ''}`}>
+    <li className={`tl-item ${last ? 'tl-last' : ''} reveal`}>
       <div className="tl-marker" />
       <div className="tl-card">
         <div className="tl-head">
@@ -95,7 +76,7 @@ export default function About(){
   return (
     <section className="section">
       {/* About hero */}
-      <div className="about-hero card">
+      <div className="about-hero card reveal">
         <div className="about-hero-left">
           <h2>About</h2>
           <p className="subtitle">{aboutBlurb}</p>

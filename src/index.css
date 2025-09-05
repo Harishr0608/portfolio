@@ -133,19 +133,26 @@ a:hover{ text-decoration: underline; }
 .chip-wrap{ display:flex; flex-wrap:wrap; gap:8px; }
 .card-head {
   display: flex;
-  align-items: center; /* vertically center the dot and title */
+  align-items: center;
   gap: 12px;
   margin-bottom: 8px;
+  position: relative;
+  padding-left: 16px;
 }
 
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: linear-gradient(90deg, var(--primary), var(--primary-2));
-  box-shadow: 0 0 16px rgba(139,92,246,0.5);
-  flex-shrink: 0; /* prevent shrinking on smaller screens */
+.card-head::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(180deg, var(--primary), var(--primary-2));
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(139,92,246,0.5);
 }
+
 
 
 /* Timeline */

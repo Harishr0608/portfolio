@@ -1,67 +1,76 @@
-// ==============================
-// src/components/Home.jsx
-// ==============================
-import React from "react";
-import profileImg from "../assets/profile.jpg"; // your image path
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useState } from 'react';
+import profileImage from '../assets/profile.jpg'; // add your image path here
 
 export default function Home() {
+  const [fabOpen, setFabOpen] = useState(false);
+
   return (
-    <section className="home min-h-screen flex items-center justify-center bg-gray-50 p-6">
-      <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start md:justify-between gap-8">
-        
-        {/* Image Section */}
-        <div className="flex justify-center md:justify-start md:w-1/2">
-          <img
-            src={profileImg}
-            alt="Harish R"
-            className="w-64 h-64 md:w-72 md:h-72 rounded-full object-cover shadow-lg"
-          />
+    <section className="hero container">
+      <div className="hero-content">
+        {/* Image on left */}
+        <div className="hero-image">
+          <img src={profileImage} alt="Harish R" />
         </div>
 
-        {/* Info Section */}
-        <div className="md:w-1/2 text-center md:text-left space-y-4">
-          {/* Name and Role */}
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
-            Harish R
-          </h1>
-          <p className="text-xl md:text-2xl text-indigo-600 font-semibold">
-            AI/ML Engineer
+        {/* Info on right */}
+        <div className="hero-info">
+          <h1 className="title-3d">Harish R</h1>
+          <h2 className="role">AI/ML Engineer</h2>
+          <p className="subtitle">
+            ML engineer with hands‑on experience delivering LLM observability on AWS Bedrock,
+            schema‑aware RAG on DynamoDB, and adaptive web scraping at scale, blending generative AI
+            with robust data engineering for measurable business impact.
           </p>
 
-          {/* Short Headline */}
-          <p className="text-gray-600 mt-2 md:mt-4 text-lg md:text-xl">
-            Experienced in building intelligent AI solutions and machine learning
-            models that drive innovation and business growth.
-          </p>
-
-          {/* Social & Contact Links */}
-          <div className="flex justify-center md:justify-start gap-4 mt-6">
-            <a
-              href="#get-in-touch"
-              className="px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition"
-            >
-              Get in Touch
+          {/* Desktop CTA buttons */}
+          <div className="cta desktop-only">
+            <a className="btn" href="mailto:harishr0608@gmail.com">
+              <span className="btn-ico" aria-hidden>
+                <svg viewBox="0 0 24 24" width="16" height="16">
+                  <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 2v.01L12 13 4 6.01V6h16Z"/>
+                </svg>
+              </span>
+              Get in touch
             </a>
-            <a
-              href="https://github.com/yourusername"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-700 hover:text-gray-900 text-2xl transition"
-            >
-              <FaGithub />
+            <a className="btn outline" href="https://www.linkedin.com/in/harishr0608/" target="_blank" rel="noreferrer">
+              LinkedIn
             </a>
-            <a
-              href="https://linkedin.com/in/yourlinkedin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-700 hover:text-blue-800 text-2xl transition"
-            >
-              <FaLinkedin />
+            <a className="btn outline" href="https://github.com/Harishr0608" target="_blank" rel="noreferrer">
+              GitHub
             </a>
           </div>
         </div>
+      </div>
 
+      {/* Mobile/Tablet Floating Action Button */}
+      <div className={`fab mobile-only ${fabOpen ? 'open' : ''}`}>
+        <button className="fab-btn" aria-label="Open quick actions" onClick={() => setFabOpen(v => !v)}>
+          <span className="fab-dot" />
+        </button>
+        <div className="fab-panel" role="menu">
+          <a className="icon-btn" href="tel:+916379918090" aria-label="Call">📞</a>
+          <a className="icon-btn" href="mailto:harishr0608@gmail.com" aria-label="Email">✉️</a>
+          <a className="icon-btn" href="https://www.linkedin.com/in/harishr0608/" target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
+          <a className="icon-btn" href="https://github.com/Harishr0608" target="_blank" rel="noreferrer" aria-label="GitHub">GH</a>
+        </div>
+      </div>
+
+      <div className="section">
+        <h2>Highlights</h2>
+        <div className="grid">
+          <div className="card feature-card">
+            <div className="feature-head"><span className="spark" aria-hidden></span><h3>LLM Observability</h3></div>
+            <p className="meta">Automated quality checks with Bedrock evaluation jobs and Comprehend sentiment to monitor outputs continuously.</p>
+          </div>
+          <div className="card feature-card">
+            <div className="feature-head"><span className="spark" aria-hidden></span><h3>Schema‑aware RAG</h3></div>
+            <p className="meta">Optimized embeddings from table schema/attributes and CoT prompting to generate accurate NoSQL queries.</p>
+          </div>
+          <div className="card feature-card">
+            <div className="feature-head"><span className="spark" aria-hidden></span><h3>Smart Scraping</h3></div>
+            <p className="meta">Two‑phase pipeline with adaptive selectors to reduce LLM calls and scale across categories.</p>
+          </div>
+        </div>
       </div>
     </section>
   );

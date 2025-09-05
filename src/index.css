@@ -131,8 +131,22 @@ a:hover{ text-decoration: underline; }
 .badge-soft{ background: rgba(99,102,241,0.12); color: #c7d2fe; }
 .chip{ display:inline-flex; align-items:center; padding:6px 10px; border-radius:12px; background:#0a1b2d; border:1px solid var(--border); color:var(--text); font-size:13px; }
 .chip-wrap{ display:flex; flex-wrap:wrap; gap:8px; }
-.card-head{ display:flex; align-items:center; gap:8px; margin-bottom:8px; }
-.dot{ width:8px; height:8px; border-radius:50%; background: linear-gradient(90deg,var(--primary),var(--primary-2)); box-shadow:0 0 16px rgba(139,92,246,.5); }
+.card-head {
+  display: flex;
+  align-items: center; /* vertically center the dot and title */
+  gap: 12px;           /* increase gap slightly for proper spacing */
+  margin-bottom: 8px;
+}
+
+.dot {
+  width: 10px;          /* slightly larger for better visibility */
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-2));
+  box-shadow: 0 0 16px rgba(139,92,246,.5);
+  flex-shrink: 0;       /* prevent shrinking on smaller screens */
+}
+
 
 /* Timeline */
 .timeline{ list-style:none; margin:0; padding:0 0 0 10px; position:relative; }

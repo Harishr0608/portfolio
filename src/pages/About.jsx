@@ -57,18 +57,7 @@ function Chip({ label }) {
   return <span className="chip">{label}</span>
 }
 
-function SkillGroup({ title, items }) {
-  return (
-    <div className="card glow-card">
-      <div className="card-head">
-        <h3>{title}</h3>
-      </div>
-      <div className="chip-wrap">
-        {items.map((it) => <Chip key={it} label={it} />)}
-      </div>
-    </div>
-  )
-}
+function SkillGroup({ title, items }) { return ( <div className="card glow-card"> <div className="card-head"> <span className="dot" aria-hidden></span> <h3>{title}</h3> </div> <div className="chip-wrap"> {items.map((it) => <Chip key={it} label={it} />)} </div> </div> ) }
 
 function TimelineItem({ item, last }) {
   return (

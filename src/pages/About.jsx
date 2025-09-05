@@ -30,9 +30,27 @@ const education = [
       'Relevant Coursework: Business Case Study, MS Excel, MySQL, Python, EDA, Feature Engineering, Data Visualization (incl. Tableau), Machine Learning, Model Deployment, Feature Selection, Web Scraping, ETL'
     ]
   },
-  { school: 'Vellore Institute of Technology', location: 'Vellore, IN', program: 'M.Tech (5‑Year Integrated Software Engineering); CGPA: 7.57', dates: '05/2023', details: [] },
-  { school: 'Orange International Matriculation School', location: 'Arani, IN', program: '12th (Tamil Nadu State Board); 72.0%', dates: '05/2018', details: [] },
-  { school: 'Orange International Matriculation School', location: 'Arani, IN', program: '10th (Tamil Nadu State Board); 88.6%', dates: '04/2016', details: [] }
+  {
+    school: 'Vellore Institute of Technology',
+    location: 'Vellore, IN',
+    program: 'M.Tech (5‑Year Integrated Software Engineering); CGPA: 7.57',
+    dates: '05/2023',
+    details: []
+  },
+  {
+    school: 'Orange International Matriculation School',
+    location: 'Arani, IN',
+    program: '12th (Tamil Nadu State Board); 72.0%',
+    dates: '05/2018',
+    details: []
+  },
+  {
+    school: 'Orange International Matriculation School',
+    location: 'Arani, IN',
+    program: '10th (Tamil Nadu State Board); 88.6%',
+    dates: '04/2016',
+    details: []
+  }
 ]
 
 function Chip({ label }) {
@@ -41,8 +59,11 @@ function Chip({ label }) {
 
 function SkillGroup({ title, items }) {
   return (
-    <div className="card">
-      <h3>{title}</h3>
+    <div className="card glow-card">
+      <div className="card-head">
+        <span className="dot" aria-hidden></span>
+        <h3>{title}</h3>
+      </div>
       <div className="chip-wrap">
         {items.map((it) => <Chip key={it} label={it} />)}
       </div>
@@ -62,8 +83,10 @@ function TimelineItem({ item, last }) {
         <p className="meta">{item.location}</p>
         <p className="tl-program">{item.program}</p>
         {item.details?.length > 0 && (
-          <ul className="tl-list">
-            {item.details.map((d, i) => <li key={i}>{d}</li>)}
+          <ul className="checklist">
+            {item.details.map((d, i) => (
+              <li key={i}><span className="check-icon" aria-hidden>✔</span>{d}</li>
+            ))}
           </ul>
         )}
       </div>
@@ -76,7 +99,7 @@ export default function About(){
   return (
     <section className="section">
       {/* About hero */}
-      <div className="about-hero card reveal">
+      <div className="about-hero card gradient-border">
         <div className="about-hero-left">
           <h2>About</h2>
           <p className="subtitle">{aboutBlurb}</p>
@@ -88,7 +111,6 @@ export default function About(){
           </div>
         </div>
       </div>
-
       {/* Split layout: Skills | Education */}
       <div className="split-2">
         {/* Skills */}
@@ -100,7 +122,6 @@ export default function About(){
             ))}
           </div>
         </section>
-
         {/* Education timeline */}
         <section>
           <h2>Education</h2>

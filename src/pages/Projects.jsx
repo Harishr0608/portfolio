@@ -1,24 +1,25 @@
 function Project({ title, when, problem, approach, tech, links }){
   return (
-    <article className="tilt">
-      <div className="card tilt-inner">
-        <h3 className="tilt-title">{title}</h3>
-        <p className="meta tilt-meta">{when}</p>
-        <p><strong>Problem:</strong> {problem}</p>
-        <p><strong>Approach:</strong> {approach}</p>
-        <p className="meta"><strong>Tech:</strong> {tech}</p>
-        {links && (
-          <p className="meta">
-            {links.map(({label, href}) => (
-              <a key={label} href={href} target="_blank" rel="noreferrer" style={{marginRight: 12}}>{label}</a>
-            ))}
-          </p>
-        )}
+    <article className="card glow-card project">
+      <div className="project-head">
+        <h3>{title}</h3>
+        <span className="badge badge-soft">{when}</span>
       </div>
+      <p className="kicker">Problem</p>
+      <p>{problem}</p>
+      <p className="kicker">Approach</p>
+      <p>{approach}</p>
+      <p className="meta"><strong>Tech:</strong> {tech}</p>
+      {links && (
+        <p className="meta links">
+          {links.map(({label, href}) => (
+            <a className="link-pill" key={label} href={href} target="_blank" rel="noreferrer">{label}</a>
+          ))}
+        </p>
+      )}
     </article>
   )
 }
-
 export default function Projects(){
   return (
     <section className="section">

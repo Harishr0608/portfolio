@@ -35,16 +35,16 @@ const education = [
   { school: 'Orange International Matriculation School', location: 'Arani, IN', program: '10th (Tamil Nadu State Board); 88.6%', dates: '04/2016', details: [] }
 ]
 
-function Chip({ label }) { return <span className="chip">{label}</span> }
+function Chip({ label }) {
+  return <span className="chip">{label}</span>
+}
 
 function SkillGroup({ title, items }) {
   return (
-    <div className="card tilt reveal">
-      <div className="tilt-inner">
-        <h3>{title}</h3>
-        <div className="chip-wrap">
-          {items.map((it) => <Chip key={it} label={it} />)}
-        </div>
+    <div className="card">
+      <h3>{title}</h3>
+      <div className="chip-wrap">
+        {items.map((it) => <Chip key={it} label={it} />)}
       </div>
     </div>
   )
@@ -52,7 +52,7 @@ function SkillGroup({ title, items }) {
 
 function TimelineItem({ item, last }) {
   return (
-    <li className={`tl-item ${last ? 'tl-last' : ''} reveal`}>
+    <li className={`tl-item ${last ? 'tl-last' : ''}`}>
       <div className="tl-marker" />
       <div className="tl-card">
         <div className="tl-head">

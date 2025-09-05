@@ -1,9 +1,9 @@
 function Project({ title, when, problem, approach, tech, links }){
   return (
-    <article className="card tilt reveal">
-      <div className="tilt-inner">
-        <h3>{title}</h3>
-        <p className="meta">{when}</p>
+    <article className="tilt">
+      <div className="card tilt-inner">
+        <h3 className="tilt-title">{title}</h3>
+        <p className="meta tilt-meta">{when}</p>
         <p><strong>Problem:</strong> {problem}</p>
         <p><strong>Approach:</strong> {approach}</p>
         <p className="meta"><strong>Tech:</strong> {tech}</p>

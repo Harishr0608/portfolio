@@ -9,13 +9,13 @@ import Footer from './components/Footer.jsx'
 export default function App() {
   return (
     <div className="app-shell">
-      <header className="navbar reveal">
+      <header className="navbar">
         <div className="container navbar-inner">
           <div className="brand">
             <span className="brand-badge">HR</span>
             <span>Harish R</span>
           </div>
-          <nav className="nav">
+          <nav className="nav" aria-label="Primary">
             <NavLink to="/" end>Home</NavLink>
             <NavLink to="/projects">Projects</NavLink>
             <NavLink to="/about">About</NavLink>
@@ -25,7 +25,8 @@ export default function App() {
         </div>
       </header>
 
-      <main>
+      {/* pad bottom so the fixed footer never overlaps content */}
+      <main id="main" className="main-area">
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />

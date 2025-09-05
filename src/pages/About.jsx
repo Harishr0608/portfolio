@@ -33,21 +33,21 @@ const education = [
   {
     school: 'Vellore Institute of Technology',
     location: 'Vellore, IN',
-    program: 'M.Tech (5‑Year Integrated Software Engineering); CGPA: 7.57',
+    program: 'M.Tech (5‑Year Integrated Software Engineering);',
     dates: '05/2023',
     details: []
   },
   {
     school: 'Orange International Matriculation School',
     location: 'Arani, IN',
-    program: '12th (Tamil Nadu State Board); 72.0%',
+    program: '12th (Tamil Nadu State Board);',
     dates: '05/2018',
     details: []
   },
   {
     school: 'Orange International Matriculation School',
     location: 'Arani, IN',
-    program: '10th (Tamil Nadu State Board); 88.6%',
+    program: '10th (Tamil Nadu State Board);',
     dates: '04/2016',
     details: []
   }
@@ -61,7 +61,6 @@ function SkillGroup({ title, items }) {
   return (
     <div className="card glow-card">
       <div className="card-head">
-        <span className="dot" aria-hidden></span>
         <h3>{title}</h3>
       </div>
       <div className="chip-wrap">

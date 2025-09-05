@@ -27,27 +27,27 @@ const education = [
     program: 'Post Graduate Program (Data Science and Engineering)',
     dates: '05/2024 – 12/2024',
     details: [
-      'Relevant Coursework: Business Case Study, MS Excel, MySQL, Python, EDA, Feature Engineering, Data Visualization (incl. Tableau), Machine Learning, Model Deployment, Feature Selection, Web Scraping, ETL'
+      'Relevant Coursework: Business Case Study, MS Excel, MySQL, Python, EDA, Feature Engineering, Data Visualization (incl. Tableau), Machine Learning, Model Deployment, Feature Selection, Web Scraping, ETL, Gen AI, NLP, Time Series Forecasting'
     ]
   },
   {
     school: 'Vellore Institute of Technology',
     location: 'Vellore, IN',
-    program: 'M.Tech (5‑Year Integrated Software Engineering);',
+    program: 'M.Tech (5‑Year Integrated Software Engineering)',
     dates: '05/2023',
     details: []
   },
   {
     school: 'Orange International Matriculation School',
     location: 'Arani, IN',
-    program: '12th (Tamil Nadu State Board);',
+    program: '12th (Tamil Nadu State Board)',
     dates: '05/2018',
     details: []
   },
   {
     school: 'Orange International Matriculation School',
     location: 'Arani, IN',
-    program: '10th (Tamil Nadu State Board);',
+    program: '10th (Tamil Nadu State Board)',
     dates: '04/2016',
     details: []
   }

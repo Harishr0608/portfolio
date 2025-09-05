@@ -103,10 +103,11 @@ export default function About(){
           <h2>About</h2>
           <p className="subtitle">{aboutBlurb}</p>
           <div className="about-badges">
-            <span className="badge">LLM Observability</span>
-            <span className="badge">Schema‑aware RAG</span>
-            <span className="badge">AWS Bedrock</span>
-            <span className="badge">DynamoDB</span>
+            <span className="badge">Machine Learning</span>
+            <span className="badge">Deep Learning(Basics)</span>
+            <span className="badge">Natural Language Processing</span>
+            <span className="badge">LLM & RAG System</span>
+            <span className="badge">Agentic AI</span>
           </div>
         </div>
       </div>

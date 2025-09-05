@@ -134,17 +134,17 @@ a:hover{ text-decoration: underline; }
 .card-head {
   display: flex;
   align-items: center; /* vertically center the dot and title */
-  gap: 12px;           /* increase gap slightly for proper spacing */
+  gap: 12px;
   margin-bottom: 8px;
 }
 
 .dot {
-  width: 10px;          /* slightly larger for better visibility */
+  width: 10px;
   height: 10px;
   border-radius: 50%;
   background: linear-gradient(90deg, var(--primary), var(--primary-2));
-  box-shadow: 0 0 16px rgba(139,92,246,.5);
-  flex-shrink: 0;       /* prevent shrinking on smaller screens */
+  box-shadow: 0 0 16px rgba(139,92,246,0.5);
+  flex-shrink: 0; /* prevent shrinking on smaller screens */
 }
 
 

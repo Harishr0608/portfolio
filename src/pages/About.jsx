@@ -94,7 +94,11 @@ function TimelineItem({ item, last }) {
 }
 
 export default function About(){
-  const aboutBlurb = `Machine Learning Engineer with a solid foundation in software engineering and practical experience in LLM applications, RAG, AWS Bedrock, and DynamoDB. Built real-time systems for prompt-response monitoring, case-sensitive NoSQL querying, and web automation with LLM pipelines. Focused on scalable ML/NLP solutions that combine generative AI with analytics to drive data-informed decisions.`
+  const aboutBlurb = `Machine Learning Engineer with production experience in LLM observability, retrieval-augmented generation, and intelligent automation systems. At Giggso, delivered enterprise-grade AI solutions including comprehensive LLM monitoring pipelines on AWS Bedrock, schema-aware RAG for DynamoDB querying, and scalable web scraping automation that reduced manual effort while improving data quality and system reliability.
+
+Built diverse ML applications spanning real-time multi-source chatbots, predictive analytics for retail and finance, computer vision for safety compliance, and natural language processing for content analysis. Expertise includes transformer models, vector databases, async processing architectures, and full-stack AI deployment using modern frameworks like FastAPI, Streamlit, and Docker.
+
+Passionate about bridging the gap between cutting-edge AI research and practical business applications, with a focus on building production-ready systems that combine generative AI capabilities with robust data engineering practices to deliver measurable impact across diverse domains.`
   return (
     <section className="section">
       {/* About hero */}

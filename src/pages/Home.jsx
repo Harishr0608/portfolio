@@ -17,9 +17,7 @@ export default function Home() {
           <h1 className="title-3d">Harish R</h1>
           <h2 className="role">AI/ML Engineer</h2>
           <p className="subtitle">
-            ML engineer with hands‑on experience delivering LLM observability on AWS Bedrock,
-            schema‑aware RAG on DynamoDB, and adaptive web scraping at scale, blending generative AI
-            with robust data engineering for measurable business impact.
+              ML Engineer with hands-on experience delivering LLM observability on AWS Bedrock, schema-aware RAG on DynamoDB, and adaptive web scraping at scale. Specialized in building production AI systems that blend generative AI with robust data engineering, from real-time multi-source chatbots to predictive analytics, driving measurable business outcomes.
           </p>
 
           {/* Desktop CTA buttons */}

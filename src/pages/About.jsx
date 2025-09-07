@@ -36,13 +36,21 @@ const skills = {
   ],
 
   'Data Engineering & Pipelines': [
-    'ETL (Extract, Transform, Load)',
-    'Data Preprocessing',
-    'Feature Engineering', 
-    'Feature Selection',
-    'Pipeline Automation',
-    'Asynchronous Processing'
-  ],
+  'ETL (Extract, Transform, Load)',
+  'Data Preprocessing', 
+  'Pipeline Automation',
+  'Asynchronous Processing',
+  'Data Quality Management'
+],
+
+'Machine Learning & Analytics': [
+  'Feature Engineering', 
+  'Feature Selection',
+  'Model Development',
+  'Statistical Analysis',
+  'Hyperparameter Tuning'
+],
+
 
   'Data Modeling': ['ER Diagrams', 'Dimensional Modeling', 'Normalization', 'Schema Design'],
   

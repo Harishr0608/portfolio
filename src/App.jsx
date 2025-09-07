@@ -28,8 +28,8 @@ export default function App() {
         <nav className="nav">
           <NavLink to="/" end>Home</NavLink>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/projects">Projects</NavLink>
           <NavLink to="/experience">Experience</NavLink>
+          <NavLink to="/projects">Projects</NavLink>
           <NavLink to="/contact">Contact</NavLink>
         </nav>
       </>

@@ -1,24 +1,109 @@
 const skills = {
-  'Programming Languages': ['Python', 'SQL', 'OOP Concepts', 'Data Structures and Algorithms'],
+  'Programming Languages': ['Python', 'SQL', 'OOP Concepts', 'Data Structures and Algorithms', 'JavaScript (Basics)'],
+  
   'Machine Learning': [
-    'Supervised Learning (Regression, Classification)',
-    'Unsupervised Learning (Clustering, PCA)',
-    'Natural Language Processing',
-    'Deep Learning (Basics)'
+    'Supervised Learning (Regression, Classification)', 
+    'Unsupervised Learning (Clustering, PCA)', 
+    'Natural Language Processing', 
+    'Deep Learning (Basics)',
+    'Computer Vision',
+    'Image Classification'
   ],
-  'Generative AI & LLMs': ['Retrieval-Augmented Generation (RAG)', 'Prompt Engineering', 'LangChain', 'DSPy', 'AWS Bedrock', 'Amazon Comprehend', 'LangGraph'],
-  'Data Modeling': ['ER Diagrams', 'Dimensional Modeling', 'Normalization', 'Schema Design', 'DynamoDB (NoSQL)'],
-  'Data Analysis': ['Exploratory Data Analysis', 'Feature Engineering', 'Feature Selection'],
-  'Statistical Methods': ['Hypothesis Testing', 'Chi-Square', 'ANOVA', 'Z-Test', 'T-Test', 'Covariance', 'Correlation'],
-  'Data Manipulation': ['Pandas', 'NumPy', 'MS Excel', 'Power Query', 'ETL (Extract, Transform, Load)'],
-  'Data Visualization': ['Matplotlib', 'Seaborn', 'Tableau', 'Power BI', 'Looker Studio'],
-  'Databases': ['MySQL', 'DynamoDB'],
-  'Version Control Systems': ['Git', 'GitHub'],
-  'Tools & Frameworks': ['Scikit-Learn', 'SciPy', 'Selenium', 'LangChain', 'DSPy', 'OpenCV', 'TensorFlow', 'Keras', 'FastAPI'],
-  'Model Deployment': ['Heroku'],
-  'Web Scraping & Automation': ['Beautiful Soup', 'Selenium', 'Image Classification'],
-  'Software Development': ['Agile Methodology'],
+  
+  'Generative AI & LLMs': [
+    'Large Language Models (LLMs)',
+    'Retrieval-Augmented Generation (RAG)', 
+    'Prompt Engineering', 
+    'LangChain', 
+    'DSPy', 
+    'LangGraph',
+    'Chain-of-Thought Prompting',
+    'LLM-as-a-Judge'
+  ],
+
+  'Cloud Platforms & AI Services': [
+    'AWS Bedrock', 
+    'Amazon Comprehend', 
+    'AWS (General)'
+  ],
+
+  'Vector Databases & Search': [
+    'ChromaDB', 
+    'Vector Embeddings', 
+    'OpenAI Embeddings API',
+    'Similarity Search', 
+    'Hybrid Search'
+  ],
+
+  'Data Engineering & Pipelines': [
+    'ETL (Extract, Transform, Load)',
+    'Data Preprocessing',
+    'Feature Engineering', 
+    'Feature Selection',
+    'Pipeline Automation',
+    'Asynchronous Processing'
+  ],
+
+  'Data Modeling': ['ER Diagrams', 'Dimensional Modeling', 'Normalization', 'Schema Design'],
+  
+  'Databases': ['MySQL', 'DynamoDB (NoSQL)'],
+  
+  'Web Development & APIs': [
+    'FastAPI', 
+    'Streamlit', 
+    'RESTful APIs',
+    'Web Applications',
+    'Frontend Integration'
+  ],
+
+  'MLOps & Deployment': [
+    'Docker', 
+    'Model Deployment', 
+    'Model Monitoring',
+    'Production Systems',
+    'Heroku'
+  ],
+
+  'Data Analysis & Visualization': [
+    'Exploratory Data Analysis',
+    'Pandas', 
+    'NumPy', 
+    'Matplotlib', 
+    'Seaborn', 
+    'Tableau', 
+    'Power BI', 
+    'Looker Studio',
+    'MS Excel', 
+    'Power Query'
+  ],
+  
+  'Statistical Methods': [
+    'Hypothesis Testing', 
+    'Chi-Square', 
+    'ANOVA', 
+    'Statistical Modeling',
+    'A/B Testing', 
+    'Z-Test', 'T-Test', 'Covariance', 'Correlation'
+  ],
+  
+  'ML Frameworks & Libraries': [
+    'Scikit-Learn', 
+    'XGBoost', 
+    'TensorFlow', 
+    'Keras', 
+    'OpenCV'
+  ],
+  
+  'Web Scraping & Automation': [
+    'Beautiful Soup', 
+    'Selenium', 
+    'Web Automation'
+  ],
+
+  'Version Control & Collaboration': ['Git', 'GitHub', 'Agile Methodology'],
 }
+
+
 
 const education = [
   {

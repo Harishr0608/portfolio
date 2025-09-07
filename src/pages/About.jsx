@@ -110,7 +110,7 @@ Passionate about bridging the gap between cutting-edge AI research and practical
             <span className="badge">Machine Learning</span>
             <span className="badge">Deep Learning(Basics)</span>
             <span className="badge">Natural Language Processing</span>
-            <span className="badge">LLM & RAG System</span>
+            <span className="badge">LLM & RAG Systems</span>
             <span className="badge">Agentic AI</span>
           </div>
         </div>

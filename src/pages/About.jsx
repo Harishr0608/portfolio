@@ -1,7 +1,7 @@
 const skills = {
-  'Programming Languages': ['Python', 'SQL', 'OOP Concepts', 'Data Structures and Algorithms', 'JavaScript (Basics)'],
+  'Programming & CS Fundamentals': ['Python', 'SQL', 'OOP Concepts', 'Data Structures and Algorithms', 'JavaScript (Basics)'],
   
-  'Machine Learning': [
+  'Machine Learning & AI': [
     'Supervised Learning (Regression, Classification)', 
     'Unsupervised Learning (Clustering, PCA)', 
     'Natural Language Processing', 
@@ -21,7 +21,7 @@ const skills = {
     'LLM-as-a-Judge'
   ],
 
-  'Cloud Platforms & AI Services': [
+  'Cloud & AI Services': [
     'AWS Bedrock', 
     'Amazon Comprehend', 
     'AWS (General)'
@@ -35,7 +35,7 @@ const skills = {
     'Hybrid Search'
   ],
 
-  'Data Engineering & Pipelines': [
+  'Data Engineering & Workflow Automation': [
   'ETL (Extract, Transform, Load)',
   'Data Preprocessing', 
   'Pipeline Automation',
@@ -47,14 +47,13 @@ const skills = {
   'Feature Engineering', 
   'Feature Selection',
   'Model Development',
-  'Statistical Analysis',
   'Hyperparameter Tuning'
 ],
 
 
   'Data Modeling': ['ER Diagrams', 'Dimensional Modeling', 'Normalization', 'Schema Design'],
   
-  'Databases': ['MySQL', 'DynamoDB (NoSQL)'],
+  'Databases': ['MySQL', 'DynamoDB (NoSQL)', 'PostgreSQL'],
   
   'Web Development & APIs': [
     'FastAPI', 
@@ -69,7 +68,8 @@ const skills = {
     'Model Deployment', 
     'Model Monitoring',
     'Production Systems',
-    'Heroku'
+    'Heroku',
+    'CI/CD'
   ],
 
   'Data Analysis & Visualization': [
@@ -89,12 +89,12 @@ const skills = {
     'Hypothesis Testing', 
     'Chi-Square', 
     'ANOVA', 
-    'Statistical Modeling',
+    'Statistical Analysis',
     'A/B Testing', 
     'Z-Test', 'T-Test', 'Covariance', 'Correlation'
   ],
   
-  'ML Frameworks & Libraries': [
+  'ML & DL Frameworks': [
     'Scikit-Learn', 
     'XGBoost', 
     'TensorFlow', 
@@ -108,7 +108,7 @@ const skills = {
     'Web Automation'
   ],
 
-  'Version Control & Collaboration': ['Git', 'GitHub', 'Agile Methodology'],
+  'Version Control & Collaboration': ['Git', 'GitHub', 'Agile Methodology', 'Jira']
 }
 
 
